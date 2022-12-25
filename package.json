@@ -1,0 +1,22 @@
+{
+  "name": "@shubham-singh/test-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubham-singh/test-package.git"
+  },
+  "author": "shubhamsng7@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubham-singh/test-package/issues"
+  },
+  "homepage": "https://github.com/shubham-singh/test-package#readme",
+  "publishConfig": {
+    "@shubham-singh:registry": "https://npm.pkg.github.com"
+  }
+}
