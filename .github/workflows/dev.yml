@@ -6,7 +6,7 @@ jobs:
     get-details:
         runs-on: ubuntu-latest
         outputs:
-            BASE_URL: ${{ fromJson(steps.get-org-meta.outputs).data.BASE_URL }}
+            BASE_URL: ${{ toJson(steps.get-org-meta.outputs) }}
         steps:
             - id: get-org-meta
               run: |
