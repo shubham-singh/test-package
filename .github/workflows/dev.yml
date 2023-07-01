@@ -6,8 +6,7 @@ jobs:
     get-details:
         runs-on: ubuntu-latest
         outputs:
-            ORG_META: ${{ steps.get-org-meta.outputs.data.BASE_URL }}
-            ORG_META1: ${{ steps.get-org-meta.outputs }}
+            BASE_URL: ${{ steps.get-org-meta.outputs.data.BASE_URL }}
         steps:
             - id: get-org-meta
               run: |
@@ -19,10 +18,9 @@ jobs:
         needs: get-details
         steps:
             - env:
-                OUTPUT1: ${{needs.get-details.outputs.ORG_META}}
-                OUTPUT2: ${{needs.get-details.outputs.ORG_META1}}
+                OUTPUT1: ${{needs.get-details.outputs.BASE_URL}}
               run: |
-                echo "$OUTPUT1"
-                echo "$OUTPUT2"
+                echo $BASE_URL
+                echo "$BASE_URL"
 
     
