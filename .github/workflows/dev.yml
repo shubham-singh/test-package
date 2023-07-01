@@ -35,7 +35,7 @@ jobs:
                 ORG_META=$(curl --location 'https://yrxn4kq69j.execute-api.us-west-2.amazonaws.com/dev/admin/orgs/combi' \--header "Authorization: Bearer $token")
                 
                 BASE_URL=$(curl --location 'https://yrxn4kq69j.execute-api.us-west-2.amazonaws.com/dev/admin/orgs/combi' \--header "Authorization: Bearer $token" | jq .data.BASE_URL)
-                # BASE_URL=$(echo $ORG_META | jq .data.BASE_URL)
+
                 GA_ID=$(echo $ORG_META | jq .data.GA_ID)
                 COMPANY_CONTACT_EMAIL=$(echo $ORG_META | jq .data.COMPANY_CONTACT_EMAIL)
                 APP_LOGO=$(echo $ORG_META | jq .data.APP_LOGO)
