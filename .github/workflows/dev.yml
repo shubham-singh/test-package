@@ -18,7 +18,7 @@ jobs:
         needs: get-details
         steps:
             - env:
-                OUTPUT1: ${{needs.get-details.outputs.BASE_URL}}
+                BASE_URL: ${{needs.get-details.outputs.BASE_URL}}
               run: |
                 echo $BASE_URL
                 echo "$BASE_URL"
